@@ -1,55 +1,40 @@
-# VLSIGuru-AI-Literacy : Vinay Mallipamu
+# Week 04 — Data & Deep Learning Foundations
 
-Portfolio for the 16-week AI Literacy Layer program at VLSIGuru.
+**Theme:** Data preparation, neural networks and learning  
+**Example throughout:** A proposed system that examines semiconductor inspection images and predicts whether an image may contain a defect.
 
-## About me
+> Learning portfolio note: This repository is a study explanation and proposed engineering workflow. The Playground experiment section contains a recording template and an illustrative observation pattern; replace it with your own settings, screenshots and observations after performing the experiment. Do not present illustrative results as measured results.
 
-* **Name:** Vinay Mallipamu
-* **VLSI track:** Physical Design (PD)
-* **Goal:** Learn how to use AI in engineering and understand how it can help with Physical Design tasks.
+## Learning goals
+- Explain how raw images become numerical model inputs.
+- Compare rule-based systems, traditional machine learning and deep learning.
+- Trace information through a neural network.
+- Explain forward pass, loss, backpropagation, parameter updates and evaluation.
+- Consider when deep learning is appropriate for an engineering problem.
 
-## How I work with AI
+## Folder contents
+| File | What it contains |
+|---|---|
+| `data_behind_deep_learning.md` | Data preparation, quality, labels, splits and flow diagram |
+| `ml_vs_deep_learning.md` | AI/ML/DL relationship and comparison table |
+| `neural_network_diagram.md` | Network architecture diagram and input-to-output example |
+| `how_neural_networks_learn.md` | Training cycle, loss, backpropagation and generalisation |
+| `playground_experiment.md` | Experiment procedure, log template and interpretation |
+| `engineering_case_study.md` | Proposed semiconductor inspection case study |
+| `sources.md` | Learning resources and evidence notes |
+| `reflection.md` | Reflection prompts with editable first-person draft |
 
-I use the ASK → CHECK → TRY → EXPLAIN method. First, I ask AI to explain a topic. Then I check the information using reliable sources, try a small example, and write what I understood in my own words.
+## Main workflow at a glance
 
-## Weekly work
-
-### W01: Start Here
-
-| File                                           | Content                              |
-| ---------------------------------------------- | ------------------------------------ |
-| [mission1.md](w01/mission1.md)                 | Find AI around you                   |
-| [mission2.md](w01/mission2.md)                 | AI, ML, Deep Learning and GenAI      |
-| [mission3.md](w01/mission3.md)                 | Is it really AI?                     |
-| [mission4.md](w01/mission4.md)                 | Make AI explain itself, then test it |
-| [mission5.md](w01/mission5.md)                 | Can AI be confidently wrong?         |
-| [mission6.md](w01/mission6.md)                 | Chatbot or agent?                    |
-| [mission7.md](w01/mission7.md)                 | What actually runs AI?               |
-| [mission8.md](w01/mission8.md)                 | Where could this help my VLSI track? |
-| [mission9.md](w01/mission9.md)                 | My AI working agreement              |
-| [python-activity.md](w01/python-activity.md)   | Python activity                      |
-| [final-reflection.md](w01/final-reflection.md) | Final reflection                     |
-
-## Repository structure
-
-```text
-vlsiguru-ai-literacy-vinay/
-├── README.md
-└── w01/
-    ├── mission1.md
-    ├── mission2.md
-    ├── mission3.md
-    ├── mission4.md
-    ├── mission5.md
-    ├── mission6.md
-    ├── mission7.md
-    ├── mission8.md
-    ├── mission9.md
-    ├── python-activity.md
-    └── final-reflection.md
+```mermaid
+flowchart LR
+ A[Raw inspection images] --> B[Prepare data]
+ B --> C[Labelled dataset]
+ C --> D[Train model]
+ D --> E[Trained model]
+ E --> F[New image prediction]
+ F --> G[Evaluate results]
 ```
 
-## My goal for this program
-
-I want to improve my AI knowledge step by step and learn how to apply it to Physical Design. I also want to understand the answers AI gives me instead of depending on them blindly.
-
+## Important limitation
+A model output is a prediction, not proof that a physical defect exists. Production use requires representative data, independent evaluation, defined acceptance criteria and engineering/human review.
